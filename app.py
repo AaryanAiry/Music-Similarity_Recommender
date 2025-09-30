@@ -1,3 +1,9 @@
+import sys
+from pathlib import Path
+
+# Add project root to Python path so 'recommender' can be imported
+sys.path.append(str(Path(__file__).resolve().parent.parent))
+
 import streamlit as st
 from recommender.model import SongRecommender
 from recommender.utils import format_song_list
